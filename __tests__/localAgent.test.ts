@@ -35,6 +35,7 @@ import {
 } from '../packages/credential-ld/src'
 import { EthrDIDProvider } from '../packages/did-provider-ethr/src'
 import { WebDIDProvider } from '../packages/did-provider-web/src'
+import { EnsDIDProvider } from '../packages/did-provider-ens/src'
 import { getDidKeyResolver, KeyDIDProvider } from '../packages/did-provider-key/src'
 import { DIDComm, DIDCommHttpTransport, DIDCommMessageHandler, IDIDComm } from '../packages/did-comm/src'
 import {
@@ -186,6 +187,9 @@ const setup = async (options?: IAgentOptions): Promise<boolean> => {
             ],
           }),
           'did:web': new WebDIDProvider({
+            defaultKms: 'local',
+          }),
+          'did:ens': new EnsDIDProvider({
             defaultKms: 'local',
           }),
           'did:key': new KeyDIDProvider({
