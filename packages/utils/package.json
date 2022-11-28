@@ -21,7 +21,7 @@
     "elliptic": "^6.5.4",
     "did-resolver": "^4.0.1",
     "elliptic": "^6.5.4",
-    "multiformats": "9.7.1",
+    "multiformats": "10.0.2",
     "uint8arrays": "^3.0.0"
   },
   "devDependencies": {
